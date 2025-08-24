@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Bancho Correr/Parar</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BANCHO CORRENDO</h1>
+  
+  <!-- Imagem inicial da lâmpada apagada -->
+  <img id="bancho" src="https://s1.ezgif.com/tmp/ezgif-18c45a477eea94.gif" alt="Bancho">
+
+  <br>
+  <button onclick="correr()">Correr</button>
+  <button onclick="parar()">Parar</button>
+  <button onclick="toggleCorrida()">Alternar</button>
+
+  <script>
+    const bancho = document.getElementById("bancho");
+    let movimento = false;
+
+    function correr() {
+      bancho.src = "https://media.tenor.com/m3Vjs6ZsZO8AAAAi/bancho-hololive.gif";
+      movimento = true;
+    }
+
+    function parar() {
+      bancho.src = "https://s1.ezgif.com/tmp/ezgif-18c45a477eea94.gif";
+      movimento = false;
+    }
+
+
+    function toggleCorrida() {
+      if (movimento) {
+        parar();
+      } else {
+        correr();
+      }
+    }
+  </script>
+
+</body>
+</html>
